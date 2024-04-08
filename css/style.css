@@ -65,6 +65,11 @@ body {
   height: 300vh;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 header {
   height: 100vh;
   background: url("../assets/img/bg_header.webp") center/cover fixed;
@@ -74,7 +79,6 @@ header {
   justify-content: center;
 }
 header h1 {
-  z-index: 1;
   font-size: 3.8rem;
   font-weight: bold;
   align-items: center;
@@ -87,7 +91,7 @@ header h1 {
 }
 @media screen and (min-width: 1200px) {
   header h1 {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 }
 header::after {
@@ -96,6 +100,35 @@ header::after {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.header-box {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-box h1 {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .header-box {
+    align-items: flex-start;
+  }
+}
+.header-box a {
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 10px;
+  border: 3px solid #488C03;
+  transition: 0.5s;
+}
+.header-box a:hover {
+  transition: 0.5s;
+  background-color: #488C03;
+  transform: translateX(10px);
 }
 
 /*# sourceMappingURL=style.css.map */

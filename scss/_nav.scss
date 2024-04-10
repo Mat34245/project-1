@@ -1,0 +1,32 @@
+@use 'variables' as v;
+nav{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: v.$color-bg-nav;
+    align-items: center;
+    color: white;
+    z-index: 2;
+    font-size: 2.2rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    
+}
+.logo{
+    flex-basis: 50%;
+    padding-left: 15px;
+    
+}
+.menu{
+    flex-basis: 50%;
+    text-align: right;
+    padding-right: 30px;
+    
+    span{
+        font-size: 3.6rem;
+    }
+}

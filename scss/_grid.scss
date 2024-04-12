@@ -1,0 +1,29 @@
+@use 'mixins' as m;
+.container{
+    padding: 10px;
+
+    @include m.md{
+        width: 760px;
+        margin: 0 auto;
+    }
+    @include m.lg{
+        width: 1160px;
+        margin: 0 auto;
+    }
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include m.md{
+        flex-direction: row;
+    }
+}
+.col{
+    width: 100%;
+    &-md50 {
+        padding: 20px;
+        flex: 0 0 50%;
+    }
+}

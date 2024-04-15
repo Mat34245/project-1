@@ -127,12 +127,12 @@ header::after {
   text-align: center;
   font-size: 2rem;
   border-radius: 10px;
-  border: 3px solid #56ad00;
+  border: 3px solid #4e9c01;
   transition: 0.5s;
 }
 .header-box a:hover {
   transition: 0.5s;
-  background-color: #56ad00;
+  background-color: #4e9c01;
   transform: translateX(10px);
 }
 
@@ -168,6 +168,9 @@ nav {
 
 section {
   min-height: 100vh;
+}
+section:nth-of-type(even) {
+  background-color: whitesmoke;
 }
 section h2 {
   text-align: center;
@@ -256,20 +259,49 @@ input, textarea, label {
 input, textarea {
   padding: 10px;
   border-radius: 6px;
-  border: 1px solid #5cb800;
+  border: 1px solid #4e9c01;
   outline: 0;
 }
 input:focus, textarea:focus {
-  border: 2px solid #56ad00;
+  border: 2px solid #4e9c01;
 }
 input[type=submit], textarea[type=submit] {
   margin-top: 30px;
-  background-color: #56ad00;
+  background-color: #4e9c01;
   color: white;
 }
 
 textarea {
   resize: none;
+}
+
+footer {
+  background-color: #0d0d0d;
+  color: white;
+  height: 40vh;
+}
+
+.menu-box {
+  box-shadow: 0 0 10px gray;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.menu-box:hover {
+  box-shadow: 0 0 20px gray;
+}
+
+.picture {
+  height: 160px;
+  background: url("../assets/img/bg_header.webp") center/cover;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.text {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

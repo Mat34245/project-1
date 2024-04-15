@@ -14,7 +14,7 @@ input{
     @extend %properties;
     padding: 10px;
     border-radius: 6px;
-    border: 1px solid #5cb800;
+    border: 1px solid v.$color-bg-link-header;
     outline: 0;
 
     &:focus{

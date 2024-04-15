@@ -1,0 +1,6 @@
+@use 'variables' as v;
+footer{
+    background-color: v.$color-bg-footer ;
+    color: white;
+    height: 40vh;
+}

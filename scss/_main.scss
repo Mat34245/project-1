@@ -1,6 +1,9 @@
 
 section{
     min-height: 100vh;
+    &:nth-of-type(even){
+      background-color: whitesmoke;
+    }
     h2{
         text-align: center;
         padding-top: 70px;

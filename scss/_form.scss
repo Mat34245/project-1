@@ -1,0 +1,34 @@
+@use 'variables' as v;
+%properties{
+    display: block;
+    margin-bottom: 5px;
+    font-family: inherit;
+    width: 100%;
+}
+
+label{
+    @extend %properties;
+}
+
+input{
+    @extend %properties;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #5cb800;
+    outline: 0;
+
+    &:focus{
+        border: 2px solid v.$color-bg-link-header;
+    }
+    &[type="submit"]{
+        margin-top: 30px;
+        background-color:v.$color-bg-link-header;
+        color: white;
+    }
+    
+}
+
+textarea{
+    @extend input;
+    resize: none;
+}

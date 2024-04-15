@@ -1,6 +1,9 @@
 *,*::after,*::before{
     box-sizing: border-box;
 }
+html, body{
+    scroll-behavior: smooth;
+}
 html{
     font-size: 10px;
 }

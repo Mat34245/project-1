@@ -56,6 +56,10 @@ table {
   box-sizing: border-box;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 html {
   font-size: 10px;
 }
@@ -123,12 +127,12 @@ header::after {
   text-align: center;
   font-size: 2rem;
   border-radius: 10px;
-  border: 3px solid #488C03;
+  border: 3px solid #56ad00;
   transition: 0.5s;
 }
 .header-box a:hover {
   transition: 0.5s;
-  background-color: #488C03;
+  background-color: #56ad00;
   transform: translateX(10px);
 }
 
@@ -167,7 +171,7 @@ section {
 }
 section h2 {
   text-align: center;
-  margin: 30px 0;
+  padding-top: 70px;
   font-weight: bold;
   font-size: 3.5rem;
 }
@@ -240,6 +244,32 @@ section p {
   .col-lg25 {
     flex: 0 0 25%;
   }
+}
+
+input, textarea, label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: inherit;
+  width: 100%;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #5cb800;
+  outline: 0;
+}
+input:focus, textarea:focus {
+  border: 2px solid #56ad00;
+}
+input[type=submit], textarea[type=submit] {
+  margin-top: 30px;
+  background-color: #56ad00;
+  color: white;
+}
+
+textarea {
+  resize: none;
 }
 
 /*# sourceMappingURL=style.css.map */

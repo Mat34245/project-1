@@ -269,6 +269,10 @@ input[type=submit], textarea[type=submit] {
   margin-top: 30px;
   background-color: #4e9c01;
   color: white;
+  width: 16%;
+  position: absolute;
+  left: 42%;
+  cursor: pointer;
 }
 
 textarea {
@@ -292,9 +296,24 @@ footer {
 
 .picture {
   height: 160px;
-  background: url("../assets/img/bg_header.webp") center/cover;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+}
+
+.picture1 {
+  background: url("../assets/img/pizza1.webp") center/cover;
+}
+
+.picture2 {
+  background: url("../assets/img/pizza2.webp") center/cover;
+}
+
+.picture3 {
+  background: url("../assets/img/pizza3.webp") center/cover;
+}
+
+.picture4 {
+  background: url("../assets/img/pizza4.webp") center/cover;
 }
 
 .text {

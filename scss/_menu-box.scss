@@ -1,22 +1,26 @@
-
-.menu-box{
+.menu-box {
     box-shadow: 0 0 10px gray;
     border-radius: 6px;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         box-shadow: 0 0 20px gray;
     }
 }
 
 .picture {
     height: 160px;
-    background: url('../assets/img/bg_header.webp') center/cover;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
 
-.text{
+@for $i from 1 through 4 {
+    .picture#{$i} {
+        background: url('../assets/img/pizza#{$i}.webp') center/cover;
+    }
+}
+
+.text {
     height: 40px;
     display: flex;
     align-items: center;

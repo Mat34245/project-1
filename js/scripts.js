@@ -1,5 +1,19 @@
 'use strict';
 
+const menuHam = document.querySelector('nav .material-icons');
+const menu = document.querySelector('.div-menu');
+const links = document.querySelectorAll('.div-menu a, .div-menu .material-icons');
+
+links.forEach(elem => {
+    elem.addEventListener('click', () => {
+        menu.classList.add('hide-menu');
+    })
+})
+
+menuHam.addEventListener('click', () => {
+    menu.classList.remove('hide-menu')
+})
+
 const labelAll = document.querySelectorAll('label');
 const labelVal = [];
 labelAll.forEach(elem => {
@@ -34,6 +48,15 @@ const getDataFromSrv = async dataFromForm => {
 
 const validateData = event => {
     event.preventDefault();
+    
+    const resPlace = document.querySelector('#result-place');
+    resPlace.innerText = '';
+    resPlace.classList.remove('alert','alert-succes');
+    
+    labelAll.forEach((elem,i)=>{
+        elem.classList.remove('alert','alert-danger');
+        elem.innerText = labelVal[i];
+    });
 
     const mail = document.querySelector('#email').value;
     const subject = document.querySelector('#title').value;
@@ -44,7 +67,30 @@ const validateData = event => {
         subject,
         message
     }
-    getDataFromSrv(dataFromForm);
+    getDataFromSrv(dataFromForm)
+    .then(res => {
+        console.log(res);
+
+        if('send' in res) {
+            resPlace.innerText = res.send;
+            resPlace.classList.add('alert','alert-succes')
+            document.querySelectorAll('input:not(input[type="submit"]),textarea').forEach(elem => {
+                elem.value = '';
+            });
+
+        }else{
+            if('email' in res){
+                showError(labelAll[0], res.email);
+            }
+            if('subject' in res){
+                showError(labelAll[1], res.subject);
+            }
+            if('message' in res){
+                showError(labelAll[2], res.message);
+            }
+            
+        }
+    });
 }
 
 const form = document.querySelector('form');

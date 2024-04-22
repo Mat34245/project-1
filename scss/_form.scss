@@ -4,21 +4,27 @@
     margin-bottom: 5px;
     font-family: inherit;
     width: 100%;
+   
 }
+
 
 label{
     @extend %properties;
+    font-size: 1.7rem;
 }
 
 input{
     @extend %properties;
-    padding: 10px;
+    padding: 15px;
     border-radius: 6px;
     border: 1px solid v.$color-bg-link-header;
     outline: 0;
+    font-size: 1.7rem;
+    background-color: #101010;
+    color: white;
 
     &:focus{
-        border: 2px solid v.$color-bg-link-header;
+        border: 1px solid v.$color-bg-link-header;
     }
     &[type="submit"]{
         margin-top: 30px;
@@ -35,4 +41,8 @@ input{
 textarea{
     @extend input;
     resize: none;
+    height: 20vh;
+    font-size: 1.5rem;
+    background-color: #101010;
+    color: white;
 }
